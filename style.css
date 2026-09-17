@@ -13,7 +13,7 @@ body{margin:0;font-family:'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg
 
 .topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;}
 .topbar .title{font-size:16px;font-weight:700;}
-.badge-count{background:var(--card);border-radius:20px;padding:6px 12px;font-size:12px;font-weight:600;}
+.badge-count{background:var(--card);border-radius:20px;padding:6px 12px;font-size:12px;font-weight:600;border:none;color:#fff;}
 
 .camera-wrap{position:relative;width:100%;aspect-ratio:3/4;background:#000;overflow:hidden;}
 .camera-wrap video, .camera-wrap canvas{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;}
@@ -50,9 +50,9 @@ body{margin:0;font-family:'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg
   position:fixed;bottom:0;left:0;right:0;max-width:480px;margin:0 auto;
   display:flex;background:var(--card);border-top:1px solid #334155;
 }
-.tab{flex:1;text-align:center;padding:12px 0;background:none;border:none;color:var(--text-soft);font-size:12px;}
+.tab{flex:1;text-align:center;padding:10px 0;background:none;border:none;color:var(--text-soft);font-size:11px;}
 .tab.active{color:var(--primary);font-weight:700;}
-.tab .icon{font-size:20px;display:block;margin-bottom:2px;}
+.tab .icon{font-size:18px;display:block;margin-bottom:2px;}
 
 .progress-wrap{padding:0 16px;margin-bottom:10px;}
 .progress-track{background:#334155;border-radius:10px;height:8px;overflow:hidden;}
@@ -76,3 +76,25 @@ body{margin:0;font-family:'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg
 .modal img{width:100%;max-height:260px;object-fit:contain;border-radius:12px;background:#0009;margin-bottom:14px;}
 
 .empty-state{text-align:center;padding:60px 20px;color:var(--text-soft);font-size:14px;}
+
+.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 16px;}
+.house-card{background:var(--card);border-radius:16px;padding:18px 12px;text-align:center;border:2px solid transparent;cursor:pointer;}
+.house-card.selected{border-color:var(--primary);}
+.house-card .emoji{font-size:36px;display:block;margin-bottom:8px;}
+.house-card .name{font-size:14px;font-weight:700;color:#fff;}
+.house-card .swatch{width:100%;height:8px;border-radius:4px;margin-top:8px;}
+
+.room-canvas-wrap{position:relative;width:100%;height:calc(100vh - 230px);background:#000;}
+.room-canvas-wrap canvas{display:block;width:100%;height:100%;touch-action:none;}
+
+.tray{display:flex;gap:8px;overflow-x:auto;padding:10px 16px;background:var(--card);}
+.tray-item{flex:0 0 auto;width:56px;height:56px;border-radius:10px;overflow:hidden;border:none;padding:0;}
+.tray-item img{width:100%;height:100%;object-fit:cover;}
+.tray-empty{font-size:12px;color:var(--text-soft);padding:10px 16px;}
+
+.control-bar{
+  position:absolute;bottom:10px;left:10px;right:10px;
+  background:rgba(15,23,42,0.9);border-radius:14px;padding:10px;
+  display:flex;justify-content:space-around;gap:6px;z-index:8;
+}
+.control-bar button{background:#334155;color:#fff;border:none;border-radius:10px;padding:8px 10px;font-size:14px;}
